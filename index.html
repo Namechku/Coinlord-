@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coinlord – Web3 Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"  />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  background: #0f0f1a;
+  overflow-x: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.section {
+  padding: 100px 10%;
+  backdrop-filter: blur(8px);
+}
+
+.hero {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #9effff;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #2de2e6;
+  display: inline-block;
+}
+
+.about, .projects, .skills, .contact {
+  margin-bottom: 120px;
+}
+
+.projects ul, .skills ul {
+  list-style: none;
+}
+
+.projects li, .skills li {
+  margin-bottom: 20px;
+}
+
+.projects strong, .skills strong {
+  color: #2de2e6;
+}
+
+.contact a {
+  display: block;
+  margin-bottom: 10px;
+  color: #9effff;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #0a0a14;
+  color: #777;
+}
+
+  </style>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>  <section class="hero">
+    <h1>Coinlord</h1>
+    <p>Crypto trader driving innovation across DeFi and Web3 ecosystems.</p>
+  </section>  <section class="section about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I’m Coinlord, a passionate crypto trader and active force in the Web3 revolution. With years of hands-on experience navigating the markets, I’ve developed deep insights into blockchain ecosystems, DeFi protocols, and token economies.
+    </p>
+    <br/>
+    <p>
+      Beyond trading, I’m involved in building and supporting innovative projects in the decentralized space — from DAO governance to early-stage crypto launches and community-driven platforms.
+    </p>
+    <br/>
+    <p>
+      Driven by curiosity and vision, I believe Web3 is more than technology — it’s a movement. I’m here to contribute, lead, and build the future of finance and the open internet.
+    </p>
+  </section>  <section class="section projects">
+    <h2 class="section-title">Projects</h2>
+    <ul>
+      <li>
+        <strong>TONxDAO</strong><br/>
+        <em>Role: Shiller / Ambassador</em><br/>
+        TONxDAO is a DAO on the TON blockchain empowering communities with transparent governance, token utility, and growth. I drove engagement and helped onboard early users.
+      </li>
+      <li>
+        <strong>DeeXchange</strong><br/>
+        <em>Role: Chief Technology Officer (CTO)</em><br/>
+        DeeXchange is a secure, multi-chain Web3 wallet. I led the technical buildout including smart contracts, UI/UX, and platform security.
+      </li>
+    </ul>  <div class="container">
+    <!-- Project 1 -->
+    <div class="project">
+      <div class="glass-box">
+        <img src="image/IMG-20250725-WA0094.jpg" alt="TONxDAO" class="glow-img">
+      </div>
+      <p class="label">Project 1: TONxDAO</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <div class="glass-box">
+        <img src="image/IMG-20250714-WA0057(1).jpg" alt="Dee X Change" class="glow-img">
+      </div>
+      <p class="label">Project 2: Dee X Change</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <div class="glass-box">
+        <img src="image/images (22).jpeg" alt="Web-3" class="glow-img">
+      </div>
+      <p class="label">Project 3: Web-3</p>
+    </div>
+  </div>
+  </section>  <section class="section skills">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+      <li><strong>Crypto Trading</strong></li>
+      <li><strong>Web3 Strategy</strong></li>
+      <li><strong>Community Building</strong></li>
+      <li><strong>Blockchain Research</strong></li>
+      <li><strong>Wallet Integration</strong></li>
+      <li><strong>Airdrop Strategy</strong></li>
+    </ul>
+  </section>  <section class="section contact">
+    <h2 class="section-title">Contact</h2>
+    <a href="mailto:aa8429387@gmail.com">Email: aa8429387@gmail.com</a>
+    <a href="https://t.me/Mr-Monitornaeem" target="_blank">Telegram: @Mr-Monitornaeem</a>
+    <a href="https://x.com/mr_monitornaeem" target="_blank">X (Twitter): @mr_monitornaeem</a>
+  </section>  <footer>
+    &copy; 2025 COINLORD. In corporation with Ezz.
+  </footer>  <script>
+    // Futuristic neuron background animation
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const nodes = Array.from({ length: 100 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.8,
+      vy: (Math.random() - 0.5) * 0.8,
+    }));
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        a.x += a.vx;
+        a.y += a.vy;
+
+        if (a.x < 0 || a.x > canvas.width) a.vx *= -1;
+        if (a.y < 0 || a.y > canvas.height) a.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(a.x, a.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = '#2de2e6';
+        ctx.fill();
+
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = 'rgba(45,226,230,' + (1 - dist / 100) + ')';
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+  </script></body>
+</html>
